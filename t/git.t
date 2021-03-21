@@ -276,7 +276,6 @@ sub make_app {
 sub make_git {
     my ( $dir, %args ) = @_;
 
-    ; "Initializing: $dir";
     Git::Repository->run( "init", ( $args{bare} ? ( '--bare' ) : () ), "$dir" );
 
     my $git = Git::Repository->new( work_tree => "$dir" );
