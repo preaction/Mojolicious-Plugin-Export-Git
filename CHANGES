@@ -1,3 +1,5 @@
 Changelog for Mojolicious-Plugin-Export-Git
 
 {{ $NEXT }}
+
+    - Initial release. Copied from Statocles.
