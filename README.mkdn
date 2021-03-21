@@ -1,0 +1,69 @@
+[![Build Status](https://travis-ci.org/preaction/Mojolicious-Plugin-Export-Git.svg?branch=master)](https://travis-ci.org/preaction/Mojolicious-Plugin-Export-Git)
+[![Coverage Status](https://coveralls.io/repos/preaction/Mojolicious-Plugin-Export-Git/badge.svg?branch=master)](https://coveralls.io/r/preaction/Mojolicious-Plugin-Export-Git?branch=master)
+
+# NAME
+
+Mojolicious::Plugin::Export::Git - Export a Mojolicious site to a Git repository
+
+# VERSION
+
+version 0.001
+
+# SYNOPSIS
+
+    use Mojolicious::Lite;
+    get '/' => 'index';
+    get '/secret' => 'secret';
+    plugin 'Export::Git' => {
+        pages => [qw( / /secret )],
+        branch => 'gh-pages',
+    };
+    app->start;
+
+# DESCRIPTION
+
+Deploy a Mojolicious webapp to a Git repository.
+
+This plugin requires Git version 1.7.2 (released July 21, 2010) or later.
+
+# ATTRIBUTES
+
+This class inherits from [Mojolicious::Plugin::Export](https://metacpan.org/pod/Mojolicious::Plugin::Export) and adds the
+following attributes:
+
+## branch
+
+The Git branch to deploy to. Defaults to "master". If you're building
+a Github Pages site for a project, you probably want to use the
+"gh-pages" branch.
+
+## remote
+
+The name of the remote to deploy to. Defaults to 'origin'.
+
+## clean
+
+If true, will completely remove all existing files before exporting. This
+ensures that any deleted files will be deleted from the repository.
+
+Defaults to true if ["branch"](#branch) isn't the current branch.
+
+# METHODS
+
+This class inherits from [Mojolicious::Plugin::Export](https://metacpan.org/pod/Mojolicious::Plugin::Export) and adds the
+following methods:
+
+# SEE ALSO
+
+[Mojolicious::Plugin::Export](https://metacpan.org/pod/Mojolicious::Plugin::Export), [Git::Repository](https://metacpan.org/pod/Git::Repository)
+
+# AUTHOR
+
+Doug Bell <preaction@cpan.org>
+
+# COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2021 by Doug Bell.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
