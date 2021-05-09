@@ -1,5 +1,5 @@
 package Mojolicious::Plugin::Export::Git;
-our $VERSION = '0.003';
+our $VERSION = '0.004';
 # ABSTRACT: Export a Mojolicious site to a Git repository
 
 =head1 SYNOPSIS

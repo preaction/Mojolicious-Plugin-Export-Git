@@ -2,6 +2,8 @@ Changelog for Mojolicious-Plugin-Export-Git
 
 {{ $NEXT }}
 
+0.003     2021-05-08 20:59:47-05:00 America/Chicago
+
     [Fixed]
 
     - Fixed another missing dependency. Thanks @eserte and @mjaix!
